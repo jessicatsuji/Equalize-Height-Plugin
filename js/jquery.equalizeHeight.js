@@ -16,14 +16,6 @@
 	}
 	
 	$.fn.equalizeHeight.maxHeight;
-
-	//Instance
-	//$.fn.equalizeHeight.instance = function(element, options) {
-		//var self = this;
-		//this.equalizeHeight;
-		
-		//Extend the default options obj
-		//$.fn.equalizeHeight.options = $.extend({}, self.defaults, options);
 		
 		//Init (construct) function
 	$.fn.equalizeHeight.init = function(element) {
@@ -40,10 +32,6 @@
 		
 		$(element).css('height', $.fn.equalizeHeight.maxHeight);
 	}
-		
-		//Set the instance to the elements data
-		//element.data('equalizeHeight', this);
 	
-	//}
 	
 })(jQuery);
