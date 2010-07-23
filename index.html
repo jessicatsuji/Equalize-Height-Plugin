@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>Equalize Height jQuery Plugin</title>
+	<link type="text/css" rel="stylesheet" media="screen" href="css/master.css" />
+	<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript" src="js/jquery.equalizeHeight.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			/* //Option Defaults - {items: 'li', itemsVisible: 3, itemOffset: 1, draggable: true, onItemSet: function(){} } */
+/*
+			$('.galleryControls').gallery({
+				animate: false,
+				itemsVisible: 'all',
+				draggable: false,
+				onItemSet: function(element, gallery) {
+					var slideLocation = parseInt($(element).text());
+					$('.gallery, .gallery2, .gallery3').each(function() {
+						$(this).data('gallery').moveTo(slideLocation);
+					});
+				}
+			});
+			
+			$('.gallery2, .gallery3').gallery({items: 'tr', draggable: false, clickable: false});
+			
+			$('.gallery').gallery({clickable: false, draggable: false});
+			
+			$('.back').bind('click', function() {
+				$('.galleryControls').data('gallery').moveTo('back');
+			});
+			$('.next').bind('click', function() {
+				$('.galleryControls').data('gallery').moveTo('next');
+			});
+*/
+			$('thead tr').each(function(i, row) {
+				items = $("thead tr:eq(" + i + "), tbody tr:eq(" + i + ")").children();
+				
+				$(items).equalizeHeight();
+			});
+			
+		});
+	</script>
+</head>
+
+<body>
+	<table>
+		<thead>
+			<tr>
+				<th>Print, Scan, Copy</th>
+			</tr>
+			<tr>
+				<th>Print, Scan, Copy</th>
+			</tr>
+			<tr>
+				<th>Print, Scan, Copy</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>no</td>
+				<td>yesyesyesyesyesyesyesyesyesyesyes yesyesyesyesyesyesyesyesyesyesyes yesyesyesyesyesyesyesyesyesyesyes yesyesyesyesyesyesyesyesyesyesyes</td>
+				<td>yes</td>
+				<td>no</td>
+				<td>yes</td>
+				<td>yes</td>
+				<td>yes no no no yes no no no yes no no no yes no no no yes no no no</td>
+				<td>yes</td>
+				<td>yes</td>
+			</tr>
+			<tr>
+				<td>no</td>
+				<td>yes</td>
+				<td>yes</td>
+				<td>no</td>
+				<td>yes</td>
+				<td>yes</td>
+				<td>yes</td>
+				<td>yes</td>
+				<td>yesyes no no no</td>
+			</tr>
+			<tr>
+				<td>no</td>
+				<td>yes</td>
+				<td>yyes no no noyes no no noyes no no noyes no no noes</td>
+				<td>no</td>
+				<td>yes</td>
+				<td>yes</td>
+				<td>yes</td>
+				<td>yyes no no noyes no no noyes no no noyes no no noyes no no noes</td>
+				<td>yes</td>
+			</tr>
+		</tbody>
+	</table>
+
+</body>
+</html>
